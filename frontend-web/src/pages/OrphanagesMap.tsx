@@ -2,19 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowRight, FiPlus } from 'react-icons/fi';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
-import Leaflet from 'leaflet';
 
-import 'leaflet/dist/leaflet.css';
 import '../styles/pages/orphanages-map.css';
 
 import mapMarker from '../img/marker.svg';
-
-const mapIcon = Leaflet.icon({
-    iconUrl: mapMarker,
-    iconSize: [58, 68],
-    iconAnchor: [29, 68],
-    popupAnchor: [178, 2]
-})
+import mapIcon from '../utils/mapIcon';
 
 function OrphanagesMap() {
     return (
@@ -57,7 +49,7 @@ function OrphanagesMap() {
                         className="map-popup"
                     >
                         Orfanato
-                        <Link to="">
+                        <Link to="/orphanage/1">
                             <FiArrowRight 
                                 size={20}
                                 color="#FFF"
@@ -67,7 +59,7 @@ function OrphanagesMap() {
                 </Marker>
             </ Map>
 
-            <Link to="/orphanage/create" className="create-orphanage">
+            <Link to="/create" className="create-orphanage">
                 <FiPlus size={32} color="#FFF" />
             </Link>
         </div>
