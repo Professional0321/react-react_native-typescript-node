@@ -1,12 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiPlus } from 'react-icons/fi';
-import { Map, TileLayer } from 'react-leaflet';
+import { FiArrowRight, FiPlus } from 'react-icons/fi';
+import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
+import Leaflet from 'leaflet';
 
 import 'leaflet/dist/leaflet.css';
 import '../styles/pages/orphanages-map.css';
 
 import mapMarker from '../img/marker.svg';
+
+const mapIcon = Leaflet.icon({
+    iconUrl: mapMarker,
+    iconSize: [58, 68],
+    iconAnchor: [29, 68],
+    popupAnchor: [178, 2]
+})
 
 function OrphanagesMap() {
     return (
@@ -37,6 +45,26 @@ function OrphanagesMap() {
                 }}
             >
                 <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+
+                <Marker
+                    icon={mapIcon}
+                    position={[-15.8138368,-47.9110414]}
+                >
+                    <Popup
+                        closeButton={false}
+                        minWidth={248}
+                        maxWidth={248}
+                        className="map-popup"
+                    >
+                        Orfanato
+                        <Link to="">
+                            <FiArrowRight 
+                                size={20}
+                                color="#FFF"
+                            />
+                        </Link>
+                    </Popup>
+                </Marker>
             </ Map>
 
             <Link to="" className="create-orphanage">
