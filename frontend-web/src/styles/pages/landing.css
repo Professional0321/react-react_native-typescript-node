@@ -40,6 +40,7 @@
     margin-top: 40px;
     font-size: 24px;
     line-height: 24px;
+    color: #f1fcff;
 }
 
 .content-wrapper .location {
@@ -58,6 +59,11 @@
 
 .content-wrapper .location strong {
     font-weight: 800;
+}
+
+.content-wrapper .location span {
+    font-size: 20px;
+    color: #f1fcff;
 }
 
 .content-wrapper .enter-app {
@@ -79,4 +85,13 @@
 
 .content-wrapper .enter-app:hover {
     background: #96FEFF;
+}
+
+.content-wrapper .logo-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.content-wrapper .logo-wrapper:first-child img {
+    margin-right: 18px;
 }
