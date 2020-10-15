@@ -12,7 +12,7 @@ function Landing() {
     return (
         <div id="page-landing">
             <div className="content-wrapper">
-                <div>
+                <div className="logo-wrapper">
                     <img src={marker} alt="Happy Logo" />
                     <img src={logoImg} alt="Happy Logo" />
                 </div>
