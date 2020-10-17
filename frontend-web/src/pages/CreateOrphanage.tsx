@@ -90,7 +90,7 @@ export default function CreateOrphanage() {
               />
 
               {
-                position.latitude != 0 && (
+                position.latitude !== 0 && (
                   <Marker 
                     interactive={false} 
                     icon={mapIcon} 
@@ -107,6 +107,7 @@ export default function CreateOrphanage() {
                 id="name" 
                 value={name}
                 onChange={event => setName(event.target.value)}
+                autoComplete="off" 
               />
             </div>
 
@@ -117,6 +118,7 @@ export default function CreateOrphanage() {
                 maxLength={300}
                 value={about}
                 onChange={event => setAbout(event.target.value)}
+                autoComplete="off" 
               />
             </div>
 
@@ -163,6 +165,7 @@ export default function CreateOrphanage() {
                 id="instructions" 
                 value={instructions}
                 onChange={event => setInstructions(event.target.value)}
+                autoComplete="off"
               />
             </div>
 
@@ -172,6 +175,7 @@ export default function CreateOrphanage() {
                 id="opening_hours" 
                 value={opening_hours}
                 onChange={event => setOpeningHours(event.target.value)}
+                autoComplete="off"
               />
             </div>
 
